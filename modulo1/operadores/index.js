@@ -31,25 +31,25 @@
 
 // exercício 1
 
-//let idade =Number (prompt (" digite sua idade!"))
-//let idadeAmigo =Number (prompt (" digite a idade do seu melhor amigo!"))
+let idade =Number (prompt (" digite sua idade!"))
+let idadeAmigo =Number (prompt (" digite a idade do seu melhor amigo!"))
 
-//const maiorIdade = idade > idadeAmigo
-//const diferencaIdade = idade - idadeAmigo
+const maiorIdade = idade > idadeAmigo
+const diferencaIdade = idade - idadeAmigo
 
-//console.log (" sua idade é maior doque a do seu melhor amigo?", maiorIdade)
-//console.log (" a diferença de idade é", diferencaIdade)
+console.log (" sua idade é maior doque a do seu melhor amigo?", maiorIdade)
+console.log (" a diferença de idade é", diferencaIdade)
 
 
 // exercício 2
 
-//let numeropar = Number (prompt ("digite um numero par"))
-//const restodadivisao = numeropar % 2
+let numeropar = Number (prompt ("digite um numero par"))
+const restodadivisao = numeropar % 2
 
-//console.log (restodadivisao)
+console.log (restodadivisao)
 
-// quando se coloca um numero par, o resto da divisão é 0 sempre
-// quando se coloca um numero impar, o resto da divião é 1 sempre
+ //quando se coloca um numero par, o resto da divisão é 0 sempre
+ //quando se coloca um numero impar, o resto da divião é 1 sempre
 
 // exercício 3
 
@@ -66,3 +66,11 @@ console.log (" sua idade em horas é", idadeEmAnos * 8760)
 
 // exercício 4
 
+let numero1  = Number ( prompt (" digite o primeiro numero"))
+let numero2 = Number ( prompt (" digite o segundo numero"))
+ 
+
+console.log (" o primeiro numero é maior que o segundo", numero1 > numero2)
+console.log (" o primeiro numero é igual ao segundo",numero1 === numero2)
+console.log (" o primeiro numero é divisivel pelo segundo", numero1 % numero2 === 0)
+console.log (" o segundo numero é divisivel que o primeiro", numero2 % numero1 ===0)
