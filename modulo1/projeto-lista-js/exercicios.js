@@ -46,57 +46,60 @@ function imprimeIdade() {
 
 // EXERCÍCIO 03
 function calculaIMC(peso, altura) {
-  // implemente sua lógica aqui
-
+  const imc = peso/(altura*altura);
+  return imc;
 }
 
 // EXERCÍCIO 04
 function imprimeInformacoesUsuario() {
-  // implemente sua lógica aqui
-  // "Meu nome é NOME, tenho IDADE anos, e o meu email é EMAIL."
-
+ const nome = prompt ("digite seu nome")
+ const idade = prompt ("qual é sua idade")
+ const email = prompt ("digite seu email")
+ console.log(`Meu nome é ${nome}, tenho ${idade} anos, e o meu email é ${email}.`)
 }
 
 // EXERCÍCIO 05
 function imprimeTresCoresFavoritas() {
-  // implemente sua lógica aqui
-
+  const cor1 = prompt ("digite sua primeira cor favorita")
+  const cor2 = prompt ("digite sua segunda cor favorita")
+  const cor3 = prompt ("digite sua terceira cor favorita")
+  const cores = [cor1,cor2,cor3]
+  console.log(cores)
 }
 
 // EXERCÍCIO 06
 function retornaStringEmMaiuscula(string) {
-  // implemente sua lógica aqui
+   return string.toUpperCase()
 
 }
 
 // EXERCÍCIO 07
 function calculaIngressosEspetaculo(custo, valorIngresso) {
-  // implemente sua lógica aqui
+  return custo/valorIngresso
 
 }
 
 // EXERCÍCIO 08
 function checaStringsMesmoTamanho(string1, string2) {
-  // implemente sua lógica aqui
+   return string1.length === string2.length
 
 }
 
 // EXERCÍCIO 09
 function retornaPrimeiroElemento(array) {
-  // implemente sua lógica aqui
+ return array[0]
 
-}
+} 
 
 // EXERCÍCIO 10
 function retornaUltimoElemento(array) {
-  // implemente sua lógica aqui
+  return array.pop(3,4)
 
 }
 
 // EXERCÍCIO 11
 function trocaPrimeiroEUltimo(array) {
-  // implemente sua lógica aqui
-
+  return array.splice(0,4)
 }
 
 // EXERCÍCIO 12
