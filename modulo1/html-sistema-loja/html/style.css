@@ -1,0 +1,35 @@
+h1{
+    color:rgb(245, 245, 245);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    
+    
+    
+}
+h2{
+    color:white;
+}
+
+
+p{
+    color:white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+
+}
+
+.imagem{
+    background-image:url(https://images2.alphacoders.com/546/thumb-1920-546183.jpg)
+    
+
+}
+.imagem{
+    background-size: 100%;
+}
+
+ol{
+    color: white;
+}
+a{
+    color: white;
+}
