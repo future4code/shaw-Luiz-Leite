@@ -9,9 +9,11 @@ import iconeComentario from '../../img/comment_icon.svg'
 import {SecaoComentario} from '../SecaoComentario/SecaoComentario'
 
 const PostContainer = styled.div`
-  border: 1px solid gray;
-  width: 300px;
+  border: 1px solid black;
+  width: 800px;
   margin-bottom: 10px;
+  border-bottom: 800px;
+
 `
 
 const PostHeader = styled.div`
