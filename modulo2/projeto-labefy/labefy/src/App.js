@@ -2,13 +2,12 @@ import React from 'react';
 import TelaConfigurarPlaylist from './componentes/telaConfigurarPlaylist';
 import TelaCriarPlalist from './componentes/telaCriarPlayslist';
 import styled from 'styled-components';
+import axios from 'axios';
 
 const  div = styled.div`
   font-family: sans-serif;
   text-align: center;
   `
-
-
 
 
 
