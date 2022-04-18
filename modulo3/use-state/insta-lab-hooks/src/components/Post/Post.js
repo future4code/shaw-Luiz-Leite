@@ -32,15 +32,19 @@ const Post = (props) => {
   };
 
   const onClickComentario = () => {
+    
     numeroCurtidas ({
       curtido: !curtido,
       numeroCurtidas:numeroCurtidas + 1
     })
   };
 
+  
   enviarComentario = (comentario) => {
     const listaDeComentarios = [...comentarios, comentario]
 
+    
+    
     numeroComentarios({
       comentarios: listaDeComentarios,
       comentando: false,
