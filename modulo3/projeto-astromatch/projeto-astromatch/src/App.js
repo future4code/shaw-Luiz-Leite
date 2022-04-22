@@ -1,12 +1,19 @@
 import React from 'react'
+import axios from 'axios'
+import TelaInicial from './Telainicial/TelaInicial'
 
 
-function App() {
-  return (
-    <div>
-      Astromatch
-    </div>
-  );
+class App extends React.Component {
+  
+  
+  
+  render() {
+    return (
+      <div>
+        {TelaInicial}
+      </div>
+    )
+  }
 }
 
-export default App;
+export default App
