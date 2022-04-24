@@ -1,66 +1,66 @@
 import React,{useEffect,useState} from 'react'
 import axios from 'axios'
+import {ContainerDiv, Navbar, MainDiv, FooterDiv, IconDiv} from './styled'
 
 
 
-const TelaInicial = (props) => {
-    const [profile, setProfile] = useState({})
+
+
+export default function TelaInicial () {
+    const [profileList, setProfileList] = useState({})
 
 
     useEffect(() => {
-        getProfileToChoose(props.profile)
-    }, [props.profile])
+        getProfileToChoose()
+    }, [])
 
     const getProfileToChoose = () => {
+        const url = "https://us-central1-missao-newton.cloudfunctions.net/astroMatch/luiz-marcelo/person"
         axios
-            .get("https://us-central1-missao-newton.cloudfunctions.net/astroMatch/luiz-marcelo/person")
-            .then((res) => setProfile(res.data.profile))
-            .catch((err) => console.log(err))
+            .get(url)
+            .then((res) => {
+                console.log (res.data);
+                setProfileList(res.data.profile);
+            })
+            .catch((err) => console.log(err.response));
     
-    }
+    };
     
-    const choosePerson = (choices) => {
-        const body = {
-            id: profile.id,
-            choice: choices
-        }
-        axios
-            .post("https://us-central1-missao-newton.cloudfunctions.net/astroMatch/luiz-marcelo/matches", body)
-            .then((res) => { getProfileToChoose()
-                if (res.data.isMatch === true) {
-                   ({
-                        title: 'Vocês deram Match!',
-                    })
-                }
-              })
-          .catch((err) => console.log(err))
-  }
+    
 
   return (
-    <div>
-        <div>
-            <a><img src={Logo} /></a>
-            <img src={AstromatchLogo} />
-            <a onClick={() => props.changePages()}><img src={Chat} /></a>
+    <ContainerDiv>
+            <Navbar>
+                <h1>astroMatch</h1>
+            </Navbar>
+            <MainDiv>
+               <img src={profileList.photo}/>
+               Nome: {profileList.name}
+               bio: {profileList.bio}
+               idade:{profileList.age}
+            </MainDiv>
+            <FooterDiv>
             
-        </div>
-        <div>
-            {(profile && Object.keys(profile).length !== 0) && profiles()}
-        </div>
-        <div>
-            <div>
-                <a onClick={() => choosePerson(false)} ><img src={Cross} /></a>
-            </div>
-            <div>
-                <a><img src={Star} /></a>
-            </div>
-            <div>
-                <a onClick={() => choosePerson(true)} ><img src={Heart} /></a>
-            </div>
-        </div>
-    </div>
+                <IconDiv>
+                    <button>S2</button>
+                </IconDiv>
+                <IconDiv>
+                    <button>S2</button>
+                </IconDiv>
+                <IconDiv>
+                   <button>X</button>
+                </IconDiv>
+            </FooterDiv>
+        </ContainerDiv>
 
 )
 }
 
-export default TelaInicial
+
+
+
+
+
+
+
+
