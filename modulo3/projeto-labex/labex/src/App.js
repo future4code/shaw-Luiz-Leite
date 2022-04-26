@@ -1,11 +1,13 @@
 import React from 'react';
-import styled from 'styled-components'
+import { Router } from './Routes/Router';
 
 function App() {
   return (
-    <div>
-     Labex
-    </div>
+
+     <div>
+     <Router/>
+     </div>
+    
   );
 }
 
