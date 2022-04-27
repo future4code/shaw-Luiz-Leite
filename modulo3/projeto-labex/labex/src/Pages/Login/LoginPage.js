@@ -1,16 +1,22 @@
 import React from 'react';
 import {LoginContainer} from "./styled"
+import {useNavigate} from "react-router-dom"
 
-class LoginPage extends React.Component {
+export const LoginPage = () => {
+    
+    const navigate = useNavigate ()
+    const goBack = (navigate) => {
+        navigate (-1)
+    }
     
     
-    render() {
+     {
         return (
             <LoginContainer>
                 <h1>Login</h1>
                 <input placeholder='Email'/>
                 <input placeholder='Senha'/>
-                <button>Voltar</button>
+                <button onClick={() => goBack (navigate)}>Voltar</button>
                 <button>Entrar</button>
             </LoginContainer>
         )
