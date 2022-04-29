@@ -6,13 +6,15 @@ import CreateTrip from '../Pages/CreateTrip/CreateTripPage'
 import ApplicationFormPage from '../Pages/ApplicationForm/ApplicationFormPage'
 import ListaTrip from '../Pages/ListTrips/ListTripsPage'
 import {BrowserRouter, Route, Routes} from "react-router-dom";
+//import Header from '../Constants/Header.js/Header';
+
 
 
 
 export const Router = () => {
     return(
         
-        <BrowserRouter>
+        <BrowserRouter> 
         <Routes>
         <Route index element = {<HomePage/>} />
         <Route path="login" element = {<LoginPage/>} />
