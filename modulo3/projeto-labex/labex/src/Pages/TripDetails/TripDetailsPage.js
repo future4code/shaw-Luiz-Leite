@@ -29,7 +29,7 @@ export const TripDetailsPage = () => {
         axios
             .get("https://us-central1-labenu-apis.cloudfunctions.net/labeX/luiz-shaw/trip/:id",{
                 headers: {
-                    auth: token
+                    //auth: token
                 }
             } )
             
