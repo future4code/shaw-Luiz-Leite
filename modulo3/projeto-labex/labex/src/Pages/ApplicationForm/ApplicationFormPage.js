@@ -1,97 +1,11 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
-import { ApplicationContainer } from "./styled"
-import { goBack } from '/Users/Luiz Maecelo/Desktop/shawterminal/shaw-Luiz-Leite/modulo3/projeto-labex/labex/src/Routes/Coordinator'
-import { useNavigate } from "react-router-dom"
+import React from 'react';
+import {ApplicationContainer} from "./styled"
+
 
 
 
 export const ApplicationFormPage = () => {
 
-
-    const navigate = useNavigate()
-
-
-    const [name, setName] = useState("")
-    const [age, setAge] = useState("")
-    const [applicationText, setApplication] = useState("")
-    const [profession, setProfession] = useState("")
-    const [country, setCountry] = useState("")
-    const [trips, setGetTrip] = useState([])
-    const [myId, setmyId] = useState("")
-
-    useEffect(() => {
-        getTripsName();
-    }, []);
-
-    
-    const getTripsName = () => {
-        axios
-            .get("https://us-central1-labenu-apis.cloudfunctions.net/labeX/luiz-shaw/trips")
-            .then((res) => {
-                console.log(res.data.trips)
-                setGetTrip(res.data.trips)
-            })
-            .catch((err) => {
-                alert(err.data.trips)
-            })
-
-    }
-
-    const renderNameTrips = trips && trips.map((trip) => {
-        return (
-            <option key={trip.id} value={trip.id}> {trip.name} </option>
-        )
-    })
-
-    console.log (myId)
-
-
-    const onchangeSelectId = (event) => {
-         setmyId(event.target.value)
-    }
-    const onchangeName = (event) => { 
-        setName(event.target.value)
-    }
-    const onchangeAge = (event) => {
-        setAge(event.target.value)
-    }
-    const onchangeApplicationText = (event) => {
-        setApplication (event.target.value)
-    }
-    const onchanProfession = (event) => {
-        setProfession(event.target.value)
-    }
-    const onchanCountry = (event) => {
-        setCountry(event.target.value)
-    }
-
-
-    const postToAppTrip = () => {
-
-        const body = {
-            name: name,
-            age: age,
-            applicationText: applicationText,
-            profession: profession,
-            country: country,
-        }
-        console.log (body)
-
-        axios
-            .post("https://us-central1-labenu-apis.cloudfunctions.net/labeX/:aluno/trips/:id/apply", body)
-            .then((res) => {
-                alert("Formulário submetido com sucesso. Boa sorte!")
-                console.log(res.data)
-                setGetTrip(res.data)
-            })
-            .catch(error => {
-                alert("Por favor preencha todos os campos e tente novamente.")
-                console.log(error.message)
-            })
-
-    }
-   
 
 
     return (
@@ -378,8 +292,8 @@ export const ApplicationFormPage = () => {
 	<option value="Zimbabwe">Zimbabwe</option>
 	<option value="Zâmbia">Zâmbia</option>
             </select>
-            <button onClick={() => goBack(navigate)}>Voltar</button>
-            <button onClick={postToAppTrip}>Enviar</button>
+            <button>Voltar</button>
+            <button>Enviar</button>
         </ApplicationContainer>
     )
 

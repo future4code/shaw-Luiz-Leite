@@ -1,48 +1,11 @@
 import {CreateTripContainer} from "./styled"
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
-import { useNavigate } from "react-router-dom"
+import React from 'react';
 
 
 
 export const CreateTripPage = () => {
 
-    const navigate = useNavigate()
-
-    const goToAppForm = (navigate) => {
-        navigate("/appForm")
-    }
-
-    const [getTrip, setGetTrip] = useState([])
-
-    useEffect(() => {
-        getTrips();
-    }, []);
-
-    const getTrips = () => {
-        axios
-            .get("https://us-central1-labenu-apis.cloudfunctions.net/labeX/luiz-shaw/trips")
-            .then((res) => {
-                console.log(res.data.trips)
-                setGetTrip(res.data.trips)
-            })
-            .catch((err) => {
-                alert(err.data.trips)
-            })
-
-    }
-
-    const renderTrips = getTrip.map((trip) => {
-        return (
-            <div key={trip.id}>
-                <p>{trip.planet}</p>
-                <p>{trip.name}</p>
-                <p>{trip.description}</p>
-            </div>
-        )
-    })
-
-
+    
 
     return (
         <CreateTripContainer>
