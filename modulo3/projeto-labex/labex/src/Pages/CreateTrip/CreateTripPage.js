@@ -1,28 +1,29 @@
-import {CreateTripContainer} from "./styled"
+import { CreateTripContainer } from "./styled"
 import React from 'react';
+import Button from '@mui/material/Button';
+import { TextField, Link } from '@mui/material';
+import { ButtonDiv } from "./styled";
 
 
 
 export const CreateTripPage = () => {
 
-    
+
 
     return (
         <CreateTripContainer>
             <h1>Criar Viagem</h1>
-            <input placeholder="Nome" />
-            <select >
-                <option>Escolha Planeta</option>
-                <option>viagem1</option>
-                <option>viagem2</option>
-                <option>viagem3</option>
-                <option>viagem4</option>
-            </select>
-            <input placeholder="Prazo do Serviço" type="date" />
-            <input placeholder="Descrição" />
-            <input placeholder="Duração em dias" />
-            <button>Voltar</button>
-            <button>Criar</button>
+            <TextField label={"Nome"} />
+            <TextField label={"Planeta"} />
+            <TextField label={"Data"} />
+            <TextField label={"Descrição"} />
+            <TextField label={"Duração em dias"} type = {'number'}/>
+
+            <ButtonDiv>
+                <Button type={'submit'} variant={'contained'} color={'primary'} > Criar </Button>
+                <Link to={''}>
+                </Link>
+            </ButtonDiv>
         </CreateTripContainer>
     )
 
