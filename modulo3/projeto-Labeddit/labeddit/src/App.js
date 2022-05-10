@@ -1,4 +1,5 @@
 import React from 'react';
+import { RouterPage } from './Routes/Router';
 
 
 function App() {
@@ -7,7 +8,7 @@ function App() {
   return (
 
      <div>
-     Labeddit
+     <RouterPage/>
      </div>
     
   );

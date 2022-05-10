@@ -5,3 +5,12 @@ export const LoginContainer = styled.div`
     flex-direction: column;
     align-items: center;
     `
+
+export const ButtonDiv = styled.div`
+display: grid;
+grid-auto-flow: column;
+gap: 16px;
+a {
+    text-decoration: none;
+}
+`
