@@ -1,61 +1,91 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
-import { ListaContainer } from "./styled"
-import { useNavigate } from "react-router-dom"
-import { goBack } from '/Users/Luiz Maecelo/Desktop/shawterminal/shaw-Luiz-Leite/modulo3/projeto-labex/labex/src/Routes/Coordinator'
-
+import React from 'react';
+import { ListaContainer , ButtonDiv } from "./styled"
+import  Button  from "@mui/material/Button";
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemButton from '@mui/material/ListItemButton';
+import ListItemText from '@mui/material/ListItemText';
+import { Link } from 'react-router-dom';
 
 
 
 
 export const ListaTrip = () => {
 
-    const navigate = useNavigate()
-
-    const goToAppForm = (navigate) => {
-        navigate("/appForm")
-    }
-
-    const [getTrip, setGetTrip] = useState([])
-
-    useEffect(() => {
-        getTrips();
-    }, []);
-
-    const getTrips = () => {
-        axios
-            .get("https://us-central1-labenu-apis.cloudfunctions.net/labeX/luiz-shaw/trips")
-            .then((res) => {
-                console.log(res.data.trips)
-                setGetTrip(res.data.trips)
-            })
-            .catch((err) => {
-                alert(err.data.trips)
-            })
-
-    }
-
-    const renderTrips = getTrip.map((trip) => {
-        return (
-            <div key={trip.id}>
-                <p>{trip.planet}</p>
-                <p>{trip.name}</p>
-                <p>{trip.description}</p>
-            </div>
-        )
-    })
-
-
 
     return (
         <ListaContainer>
-            <button onClick={() => goBack(navigate)}>Voltar</button>
-            <button onClick={() => goToAppForm(navigate)}>Inscrever-se</button>
             <h1>Lista de Viagens</h1>
-            {renderTrips}
+            <ButtonDiv>
+            <Link to={"/viagem/criar"}>
+            <Button variant={'contained'} color={'primary'} >Criar Viagem</Button>
+            </Link>
+            <Link to={"/"} >
+            <Button variant={'outlined'} color={'secondary'} >Voltar</Button>
+            </Link>
+            </ButtonDiv>
+            
+            
+      
+      <nav aria-label="secondary mailbox folders">
+        <List>
+        <Link to={"/viagens/detalhe"} >
+          <ListItem disablePadding>
+            <ListItemButton>
+              <ListItemText primary="Viagem para marte" />
+            </ListItemButton>
+          </ListItem>
+          </Link>
+
+          <Link to={"/viagens/detalhe"} >
+          <ListItem disablePadding>
+            <ListItemButton>
+              <ListItemText primary="Viagem para Lua" />
+            </ListItemButton>
+          </ListItem>
+          </Link>
+        </List>
+      </nav>
+      
+          
+            
+        
         </ListaContainer>
     )
 
 }
 
 export default ListaTrip
+
+
+
+
+
+
+/*<nav aria-label="secondary mailbox folders">
+        <List>
+        
+        <ButtonDiv>
+        <Link to={"/viagens/detalhe"}>
+          <ListItem disablePadding>
+            <ListItemButton>
+              <ListItemText primary="Viagem para Marte" />
+            </ListItemButton>
+          </ListItem>
+          </Link>
+        
+        <Link to={"/viagens/detalhe"}>
+          <ListItem disablePadding>
+            <ListItemButton>
+              <ListItemText primary="Viagem para Lua" />
+            </ListItemButton>
+          </ListItem>
+          </Link>
+          </ButtonDiv>
+          
+          </List>
+      </nav>*/
+
+
+
+     // import { Button, List, ListItem, ListItemText, ListItemButton }from "@mui/material"

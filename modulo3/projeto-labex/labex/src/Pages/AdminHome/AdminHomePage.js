@@ -1,4 +1,4 @@
-import React from 'react';
+/*import React from 'react';
 import { AdminContainer } from "./styled"
 import {useNavigate} from "react-router-dom"
 
@@ -30,4 +30,4 @@ export const AdminHomePage = () => {
     
 }
 
-export default AdminHomePage
+export default AdminHomePage*/

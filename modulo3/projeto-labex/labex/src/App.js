@@ -1,15 +1,19 @@
+
 import React from 'react';
-import { Router } from './Routes/Router';
+import {RouterPage} from '../src/Routes/Router'
+
+
 
 function App() {
 
   
   return (
 
-     <div>
-     <Router/>
-     </div>
+     
+       <div>
+     <RouterPage/>
     
+     </div>
   );
 }
 

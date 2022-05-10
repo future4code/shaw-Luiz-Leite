@@ -9,16 +9,14 @@ export const HomeContainer = styled.div`
     align-content: center;
     height: 100vh;
     background-image:url('../');
+    gap: 16px;
 `
 export const ButtonDiv = styled.div`
-    display: flex;
-    justify-content: space-between;
-    width: 25vw;
-    z-index: 2;
+  display: grid;
+  grid-auto-flow: column;
+  gap: 16px;
 
-    `
-
-export const ImageBackground = styled.div`
-
- 
- `
+  a {
+      text-decoration: none;
+  }
+`
