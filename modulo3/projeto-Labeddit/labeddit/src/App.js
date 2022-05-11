@@ -1,5 +1,7 @@
+import { ThemeProvider } from '@mui/material';
 import React from 'react';
 import { RouterPage } from './Routes/Router';
+import theme from './Components/Theme';
 
 
 function App() {
@@ -7,9 +9,9 @@ function App() {
   
   return (
 
-     <div>
+     <ThemeProvider theme={theme}>
      <RouterPage/>
-     </div>
+     </ThemeProvider>
     
   );
 }

@@ -1,6 +1,7 @@
 import React from 'react';
-import { LoginContainer , ButtonDiv} from './Styled';
+import { LoginContainer , ButtonDiv, LogoContainer} from './Styled';
 import { TextField, Button  } from '@mui/material';
+import logo from '../../Imagens/logo.png'
 import { Link } from 'react-router-dom';
 
 
@@ -10,6 +11,7 @@ export const LoginPage = () => {
 
         <LoginContainer>
         <h1>Labeddit</h1>
+        <LogoContainer src={logo}/>
         <TextField label={"Nome"} /> 
                 <TextField label={"Senha"} type = {"password"}/>
 

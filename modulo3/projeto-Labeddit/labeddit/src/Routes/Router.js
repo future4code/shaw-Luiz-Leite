@@ -4,6 +4,8 @@ import LoginPage from "../Pages/Login/LoginPage";
 import CadastroPage from "../Pages/Cadastro/CadastroPage";
 import FeedPage from "../Pages/Feed/FeedPage";
 import PostPage from "../Pages/Post/PostPage";
+import Header from "../Header/Header";
+
 
 
 
@@ -13,9 +15,9 @@ export const RouterPage = () => {
     <BrowserRouter>
         <Routes>
         <Route index element={<LoginPage />} />
-        <Route path="/cadastro" element={<CadastroPage/>} />
-        <Route path="/feed" element={<FeedPage/>} />
-        <Route path="/post" element={<PostPage/>} />
+        <Route path="/cadastro" element={<div><Header/><CadastroPage/></div>} />
+        <Route path="/feed" element={<div><Header/><FeedPage/></div>} />
+        <Route path="/post" element={<div><Header/><PostPage/></div>} />
         <Route path="*" element={<div>Pagina não encontrada </div>} />
       </Routes>
     </BrowserRouter>

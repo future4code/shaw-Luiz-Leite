@@ -5,11 +5,13 @@ import { Link } from 'react-router-dom';
 import Checkbox from '@mui/material/Checkbox';
 import FormControlLabel from '@mui/material/FormControlLabel';
 
+
 const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
 
 export const CadastroPage = () => {
     return (
 
+      
         <CadastroContainer>
       <h1> Olá, Boas vindas ao Labeddit</h1>
       <TextField label={"Nome"} /> 

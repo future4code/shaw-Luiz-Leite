@@ -14,3 +14,8 @@ a {
     text-decoration: none;
 }
 `
+
+export const LogoContainer = styled.div`
+width: 70vw;
+max-width: 350px;
+`
