@@ -1,10 +1,12 @@
 import React from 'react';
 import { FeedContainer, ButtonDiv } from './Styled';
 import { TextField, Button } from '@mui/material';
+//import {useProtectedPage} from '../../Components/Hooks/useProtectPage'
 
 
 
 export const FeedPage = () => {
+    //useProtectedPage ()
     return (
 
         <FeedContainer>

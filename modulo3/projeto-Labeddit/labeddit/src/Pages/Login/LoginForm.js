@@ -2,27 +2,23 @@ import React from 'react';
 import { ButtonDiv, InputContainer} from './Styled';
 import { TextField, Button } from '@mui/material';
 import useForm from '../../Components/Hooks/useForm';
-import axios from 'axios';
-import { BASE_URL } from '../../Components/Url';
 import logo from "../../Imagens/logo.png"
+import { login } from '../../Service/User';
+import { useNavigate } from 'react-router-dom';
+//import {useUnprotectedPage} from '../../Components/Hooks/useUnprotectedPage'
+
+
 
 export const LoginForm = () => {
     const [form, onChange, clear] = useForm({ email: "", password: "" })
+    const navigate = useNavigate ()
+    //useUnprotectedPage()
+
 
     const onSubmitForm = (event) => {
-        console.log(form)
         event.preventDefault()
-        //login()
+        login (form, clear, navigate)
         
-
-    }
-    const login = () => {
-        axios.post (`${BASE_URL}/users/login`, form)
-        .then ((res) => {
-        localStorage.setItem("token", res.data.token)
-        clear()
-    })
-        .catch((err)=>alert("Erro no login"))
     }
     
 
@@ -57,7 +53,7 @@ export const LoginForm = () => {
                     />
                     <ButtonDiv>
         
-                            <Button
+                            <Button 
                                 fullWidth
                                 margin='dense'
                                 type={'submit'}
@@ -77,3 +73,9 @@ export const LoginForm = () => {
 
 
 export default LoginForm
+
+
+
+
+
+//onClick={() => goToFeedPage (navigate)
