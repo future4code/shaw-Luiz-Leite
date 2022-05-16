@@ -5,14 +5,14 @@ import useForm from '../../Components/Hooks/useForm';
 import logo from "../../Imagens/logo.png"
 import { login } from '../../Service/User';
 import { useNavigate } from 'react-router-dom';
-//import {useUnprotectedPage} from '../../Components/Hooks/useUnprotectedPage'
+import {useUnprotectedPage} from '../../Components/Hooks/useUnprotectedPage'
 
 
 
 export const LoginForm = () => {
     const [form, onChange, clear] = useForm({ email: "", password: "" })
     const navigate = useNavigate ()
-    //useUnprotectedPage()
+    useUnprotectedPage()
 
 
     const onSubmitForm = (event) => {
@@ -51,6 +51,8 @@ export const LoginForm = () => {
                         margin='dense'
                         required
                     />
+                    <br/>
+                    <br/>
                     <ButtonDiv>
         
                             <Button 

@@ -12,7 +12,7 @@ export const login = (body, clear,navigate) => {
     goToFeedPage(navigate)
     
 })
-    .catch((err)=>alert("Erro no login"))
+    .catch((err)=>alert(err.response.data.message))
 }
 
 export const signup = (body, clear,navigate) => {
@@ -23,7 +23,7 @@ export const signup = (body, clear,navigate) => {
     goToFeedPage(navigate)
     
 })
-    .catch((err)=>alert("Erro no login"))
+    .catch((err)=>alert(err.response.data.message))
 }
  
 

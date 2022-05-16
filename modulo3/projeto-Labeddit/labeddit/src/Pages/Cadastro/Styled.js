@@ -4,6 +4,9 @@ export const CadastroContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
+    ;
+
     `
 
 export const ButtonDiv = styled.div`

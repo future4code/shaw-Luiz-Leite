@@ -14,7 +14,7 @@ export const CadastroPage = () => {
 
       
         <CadastroContainer>
-      <h1> Olá, Boas vindas ao Labeddit</h1>
+      <h1> Olá, Boas Vindas ao Labeddit!!</h1>
             <img src={logo}/>
             <CadastroForm/>
         </CadastroContainer>

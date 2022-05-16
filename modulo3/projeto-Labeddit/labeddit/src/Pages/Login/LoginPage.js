@@ -11,13 +11,16 @@ export const LoginPage = () => {
 
         <LoginContainer> 
            <LoginForm/>
+           <br/>
             <ButtonDivCadastro>
                 <Link to={'/cadastro'}>
                     <Button
                         fullWidth
                         margin='dense'
+                        type={'submit'}
                         variant={'contained'}
-                        color={'secondary'} >
+                        color={'primary'}
+                                  >
                         Criar uma Conta</Button>
                 </Link>
             </ButtonDivCadastro>

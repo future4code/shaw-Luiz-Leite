@@ -6,11 +6,32 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
-import { Link } from 'react-router-dom';
 import { ButtonDiv } from '../Header/Styled';
+import { useNavigate } from 'react-router-dom';
+import { goToLogin } from '../Routes/Coordinator';
+import { useState } from 'react';
 
 
 const Header = () =>{
+  const navigate = useNavigate ()
+  const token = localStorage.getItem ("token")
+  const [rightButtonText , setRightButtonText] = useState (token ? "logout" : "login")
+
+  const logout = () => {
+    localStorage.removeItem("token")
+  }
+
+  const rightButtonAction = () => {
+    if (token) {
+      logout()
+      setRightButtonText ("login")
+      goToLogin (navigate)
+    } else {
+      goToLogin (navigate)
+    }
+  }
+
+
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
@@ -27,9 +48,7 @@ const Header = () =>{
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>  
           </Typography>
           <ButtonDiv>
-          <Link to={'/'}>
-          <Button color="inherit">Login</Button>
-          </Link>
+          <Button onClick={rightButtonAction} color="inherit">{rightButtonText}</Button>
           </ButtonDiv>
         </Toolbar>
       </AppBar>
