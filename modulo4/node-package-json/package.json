@@ -1,0 +1,12 @@
+{
+  "name": "aula-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": { 
+    "luiz": "node ./index.js"
+   
+  },
+  "author": "Luiz Marcelo",
+  "license": "ISC"
+}
