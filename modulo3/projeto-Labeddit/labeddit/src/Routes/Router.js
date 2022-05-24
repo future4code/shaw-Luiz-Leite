@@ -17,7 +17,7 @@ export const RouterPage = () => {
         <Route index element={<LoginPage />} />
         <Route path="/cadastro" element={<div><Header/><CadastroPage/></div>} />
         <Route path="/feed" element={<div><Header/><FeedPage/></div>} />
-        <Route path="/post" element={<div><Header/><PostPage/></div>} />
+        <Route path="/post/:postId" element={<div><Header/><PostPage/></div>} />
         <Route path="*" element={<div>Pagina não encontrada </div>} />
       </Routes>
     </BrowserRouter>

@@ -1,25 +1,33 @@
 import React from 'react';
 import { ButtonDiv, InputContainer} from './Styled';
 import { TextField, Button } from '@mui/material';
-import useForm from '../../Components/Hooks/useForm';
 import logo from "../../Imagens/logo.png"
-import { login } from '../../Service/User';
-import { useNavigate } from 'react-router-dom';
-import {useUnprotectedPage} from '../../Components/Hooks/useUnprotectedPage'
+import { useState } from 'react';
+
 
 
 
 export const LoginForm = () => {
-    const [form, onChange, clear] = useForm({ email: "", password: "" })
-    const navigate = useNavigate ()
-    useUnprotectedPage()
+    const [email ,setEmail] = useState ("")
+    const [password ,setPassword] = useState ("")
+   
+    
+    const handleUpdateEmail = (event) => {
+        const newEmail = event.target.value;
+        setEmail(newEmail);
+      }
+    
+    const handleUpdatePassword = (event) => {
+        const newPassword = event.target.value;
+        setPassword(newPassword);
+      }
+      const handleLogin = async (event) => {
+        const body = {
+          email: email,
+          password: password,
+        }
 
-
-    const onSubmitForm = (event) => {
-        event.preventDefault()
-        login (form, clear, navigate)
-        
-    }
+        const response = await axios.post(`${baseUrl}/login`, body);
     
 
     return (
@@ -27,23 +35,24 @@ export const LoginForm = () => {
 
             <InputContainer>
             <img src ={logo}/> 
-                <form onSubmit={onSubmitForm}>
+               
                     <TextField
                         name={"email"}
                         autocomplete="off"
-                        value={form.email}
-                        onChange={onChange}
+                        value={email}
+                        onChange={handleUpdateEmail}
                         label={"email"}
                         variant={"outlined"}
                         type={"email"}
                         fullWidth
                         margin='dense'
                         required
+                        
                     />
                     <TextField
                         name={"password"}
-                        value={form.password}
-                        onChange={onChange}
+                        value={password}
+                        onChange={handleUpdatePassword}
                         label={"Senha"}
                         variant={"outlined"}
                         type={"password"}
@@ -65,7 +74,7 @@ export const LoginForm = () => {
                                 Continuar </Button>
                         
                     </ButtonDiv>
-                </form>
+                
             </InputContainer>
             
       
