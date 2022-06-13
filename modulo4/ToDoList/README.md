@@ -127,7 +127,7 @@ ENDPOINTS
 ------------------------------------------------------------------------------------------------
 
 
-- **Pegar tarefa pelo id** - get tsk by ID
+- **Pegar tarefa pelo id** - get task by Id
     
     **Método:** GET
     **Path:** `/task/:id`

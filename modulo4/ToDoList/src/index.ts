@@ -5,6 +5,9 @@ import * as dotenv from 'dotenv';
 import createUser from './endPoints/createUser'
 import getUserById from "./endPoints/getUserById";
 import editUser from "./endPoints/editUser";
+import createTask from "./endPoints/createTask";
+import getTaskById from "./endPoints/getTaskById";
+
 
 dotenv.config()
 
@@ -37,8 +40,10 @@ app.get('/user/:id', getUserById)
 app.post('/user/edit/:id', editUser)
 
 //quarto endPoint (createTask)
+app.put('/task', createTask)
 
-//quinto endPoint
+//quinto endPoint (getTaskById)
+app.get('/task/:id', getTaskById)
 
 
 
