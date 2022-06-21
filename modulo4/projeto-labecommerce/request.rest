@@ -1,0 +1,39 @@
+POST  http://localhost:3003/user
+Content-Type: application/json
+
+{
+    "name":"fulano",
+    "email":"fulano@gmail.com",
+    "password":"123fulano"
+}
+
+###
+
+GET http://localhost:3003/users
+
+###
+POST   http://localhost:3003/products
+Content-Type: application/json
+
+{
+    "name":"notbook gamer",
+    "price":4000.10,
+    "image_url":"https://i.picsum.photos/id/0/5616/3744.jpg?hmac=3GAAioiQziMGEtLbfrdbcoenXoWAW-zlyEAMkfEdBzQ"
+}
+
+###
+GET http://localhost:3003/products
+
+###
+POST http://localhost:3003/purchases
+Content-Type: application/json
+
+{
+    "userId":"1655749451112",
+    "productId":"1655764066186",
+    "quantity":5
+}
+###
+
+GET http://localhost:3003/users/1655211163177/purchases
+
