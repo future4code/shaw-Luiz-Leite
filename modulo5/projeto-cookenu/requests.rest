@@ -1,0 +1,37 @@
+POST http://localhost:3003/users/signup
+Content-Type: application/json
+
+{
+    "name":"Alice",
+    "email":"alice@gmail.com",
+    "password":"123"
+}
+### 
+# @name login
+POST http://localhost:3003/users/login
+Content-Type: application/json
+
+{
+   
+    "email":"alice@gmail.com",
+    "password":"123"
+}
+
+###
+# @name getProfile
+http://localhost:3003/users/profile
+Authorization: : {{login.response.body.token}}
+
+###
+http://localhost:3003/users/{{getProfile.response.body.id}}/profile
+Authorization: {{login.response.body.token}}
+
+
+POST http://localhost:3003/recipe
+Content-Type: application/json
+
+{
+    "title":"Big Mac",
+    "description":"alice@gmail.com"
+    
+}

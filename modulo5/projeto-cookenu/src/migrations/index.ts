@@ -5,7 +5,7 @@ import { recepiTableName, userTableName } from "../types";
 
 
     connection.raw(`
-    CREATE TABLE ${userTableName}
+    CREATE TABLE IF NOT EXISTS ${userTableName}
     (
     id VARCHAR(255) PRIMARY KEY,
     name VARCHAR (255) NOT NULL,
@@ -28,4 +28,7 @@ import { recepiTableName, userTableName } from "../types";
     ).catch ( error =>
         console.log (error.message)
 
+    ).finally(() =>{
+        connection.destroy()
+    }
     )
