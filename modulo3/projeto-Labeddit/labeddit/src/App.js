@@ -1,20 +1,21 @@
-import { ThemeProvider } from '@mui/material';
-import React from 'react';
-import { RouterPage } from './Routes/Router';
-import theme from './Components/Theme';
-
+import React, { useState } from "react";
+import Router from "./Routes/Router";
+import { GlobalStyle } from "./styled";
 
 function App() {
+  const token = localStorage.getItem("token");
+  const [rightButtonText, setRightButtonText] = useState(
+    token ? "Logout" : "Login"
+  );
 
-  
-
-  
   return (
-
-     <ThemeProvider theme={theme}>
-     <RouterPage/>
-     </ThemeProvider>
-    
+    <div>
+      <GlobalStyle />
+      <Router
+        rightButtonText={rightButtonText}
+        setRightButtonText={setRightButtonText}
+      />
+    </div>
   );
 }
 
