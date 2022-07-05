@@ -1,4 +1,6 @@
 import { Request, Response } from "express"
+import connection from "../../connection";
+import { recepiTableName } from "../../types";
 
 export default async function createRecipeId(
     req: Request,
@@ -6,7 +8,21 @@ export default async function createRecipeId(
 ): Promise<void> {
 
     try {
+        const [recipe] = await connection (recepiTableName)
+        .where ({id: req.params.id})
+
+        if(!recipe){
+            res.statusCode = 404
+            throw new Error ("Recipe not found")
+        }
+
+        res.send ({
+            id:recipe.id,
+            title:recipe.title,
+            description:recipe.description,
+            createdAt:recipe.created_at
         
+        })
 
     
     } catch (error) {
