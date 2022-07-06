@@ -1,9 +1,9 @@
-import { Button, FormAndButtonsContainer, HorizontalLine, LoginPageContainer, LogoContainer, PageContainer } from "./styled";
+import { Button, FormAndButtonsContainer, HorizontalLine, LoginPageContainer, LogoContainer, PageContainer } from "./Styled";
 import logo from "../../assets/imgs/logo.svg"
 import LoginForm from "./LoginForm";
-import { goToSignUpPage } from "../../routes/coordinator";
+import { goToSignUpPage } from "../../Routes/cordinator";
 import { useNavigate } from "react-router-dom";
-import { useUnprotectedPage } from "../../hooks/useUnprotectedPage";
+import { useUnprotectedPage } from "../../Hooks/UseUnprotectePage";
 
 function LoginPage({ rightButtonText, setRightButtonText }) {
     useUnprotectedPage()

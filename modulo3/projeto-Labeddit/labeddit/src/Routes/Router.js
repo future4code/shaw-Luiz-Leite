@@ -3,7 +3,7 @@ import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import FeedPage from "../Pages/FeedPage/FeedPage";
 import LoginPage from "../Pages/LoginPage/LoginPage";
 import PostDetailsPage from "../Pages/PostDetailsPage/PostDetailsPage";
-import SignUpPage from "../Pages/SignUpPage/SignUpPage";
+import SignUpPage from "../Pages/SignupPage/SignupPage";
 
 function Router({rightButtonText, setRightButtonText}) {
     return (

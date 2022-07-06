@@ -1,5 +1,5 @@
 import axios from "axios";
-import { baseURL } from "../../constants/urls";
+import { baseURL } from "../../Constants/url";
 import {
   BodyPost,
   CommentContainer,

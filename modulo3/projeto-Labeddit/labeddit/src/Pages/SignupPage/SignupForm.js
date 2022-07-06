@@ -1,10 +1,10 @@
-import { CircularProgress } from "@material-ui/core";
+import { CircularProgress } from "@mui/material";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useForm } from "../../hooks/useForm";
-import { goToLoginPage } from "../../routes/coordinator";
+import { useForm } from "../../Hooks/UseForm";
+
 import { signUp } from "../../services/users";
-import { CheckContainer, FormContainer, Input } from "./styled";
+import { CheckContainer, FormContainer, Input } from "./Styled";
 
 function SignUpForm({rightButtonText, setRightButtonText}) {
     const { form, onChange, cleanFields } = useForm({

@@ -1,8 +1,7 @@
-import Header from "../../components/Header/Header";
-import { useUnprotectedPage } from "../../hooks/useUnprotectedPage";
-import { goToLoginPage } from "../../routes/coordinator";
-import SignUpForm from "./SignUpForm"
-import { PageContainer, SignUpPageContainer } from "./styled"
+import Header from "../../componets/Header/Header";
+import { useUnprotectedPage } from "../../Hooks/UseUnprotectePage";
+import SignUpForm from "./SignupForm"
+import { PageContainer, SignUpPageContainer } from "./Styled"
 
 function SignUpPage({rightButtonText, setRightButtonText}) {
     useUnprotectedPage()

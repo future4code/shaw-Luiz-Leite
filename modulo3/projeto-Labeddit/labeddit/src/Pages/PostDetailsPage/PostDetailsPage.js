@@ -1,11 +1,11 @@
 import axios from "axios";
 import { useParams } from "react-router-dom";
-import CommentCard from "../../components/CommentCard/CommentCard";
-import Header from "../../components/Header/Header";
-import PostCard from "../../components/PostCard/PostCard";
-import { baseURL } from "../../constants/urls";
-import { useProtectedPage } from "../../hooks/useProtectedPage";
-import useRequestData from "../../hooks/useRequestData";
+import CommentCard from "../../componets/commentedCard/CommentedCard";
+import Header from "../../componets/Header/Header";
+import PostCard from "../../componets/PostCard/PostCard";
+import { baseURL } from "../../Constants/url";
+import { useProtectedPage } from "../../Hooks/UseProtectedPage";
+import useRequestData from "../../Hooks/UseRequestData";
 import CommentForm from "./CommentForm";
 import {
   PageContainer,
@@ -13,7 +13,7 @@ import {
   PostContainer,
   HorizontalLine,
   CircularProgressLoading
-} from "./styled";
+} from "./Styled";
 
 function PostDetailsPage({ rightButtonText, setRightButtonText }) {
   useProtectedPage();

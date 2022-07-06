@@ -1,8 +1,8 @@
-import { CircularProgress } from "@material-ui/core";
+import { CircularProgress } from "@mui/material";
 import { useState } from "react";
-import { useForm } from "../../hooks/useForm";
-import { createComment } from "../../services/posts";
-import { BodyInput, CommentFormContainer } from "./styled";
+import { useForm } from "../../Hooks/UseForm";
+import { createComment } from "../../services/post";
+import { BodyInput, CommentFormContainer } from "./Styled";
 
 function CommentForm(props) {
 

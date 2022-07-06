@@ -1,6 +1,6 @@
 import axios from "axios"
-import { baseURL } from "../constants/urls"
-import useRequestData from "../hooks/useRequestData"
+import { baseURL } from "../Constants/url"
+
 
 export const createPost = (form, cleanFields, getPosts, setIsLoading) => {
     setIsLoading(true)

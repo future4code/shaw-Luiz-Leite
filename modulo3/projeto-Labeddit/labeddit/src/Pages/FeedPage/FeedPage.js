@@ -1,10 +1,10 @@
 import { useNavigate } from "react-router-dom";
-import Header from "../../components/Header/Header";
-import PostCard from "../../components/PostCard/PostCard";
-import { baseURL } from "../../constants/urls";
-import { useProtectedPage } from "../../hooks/useProtectedPage";
-import useRequestData from "../../hooks/useRequestData";
-import { goToPostDetailsPage } from "../../routes/coordinator";
+import Header from "../../componets/Header/Header";
+import PostCard from "../../componets/PostCard/PostCard";
+import { baseURL } from "../../Constants/url";
+import { useProtectedPage } from "../../Hooks/UseProtectedPage";
+import useRequestData from "../../Hooks/UseRequestData";
+import { goToPostDetailsPage } from "../../Routes/cordinator";
 import PostForm from "./PostForm";
 import {
   CircularProgressLoading,
@@ -12,7 +12,7 @@ import {
   HorizontalLine,
   PageContainer,
   PostsListContainer
-} from "./styled";
+} from "./Styled";
 
 function FeedPage({ rightButtonText, setRightButtonText }) {
   useProtectedPage();

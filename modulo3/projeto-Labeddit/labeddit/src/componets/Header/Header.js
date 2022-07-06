@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import logo from "../../assets/imgs/logo.svg";
-import { goToFeedPage, goToLoginPage } from "../../routes/coordinator";
+import { goToFeedPage, goToLoginPage } from "../../Routes/cordinator";
 import { HeaderContainer } from "./styled";
 
 function Header({

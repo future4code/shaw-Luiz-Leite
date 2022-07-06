@@ -1,14 +1,14 @@
-import { CircularProgress } from "@material-ui/core";
-import axios from "axios";
+import { CircularProgress } from "@mui/material";
+
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { baseURL } from "../../constants/urls";
-import { useForm } from "../../hooks/useForm";
-import { goToFeedPage } from "../../routes/coordinator";
-import { login } from "../../services/users";
-import { FormContainer } from "./styled";
 
-function LoginForm({rightButtonText, setRightButtonText}) {
+import { useForm } from "../../Hooks/UseForm";
+
+import { login } from "../../services/users";
+import { FormContainer } from "./Styled";
+
+function LoginForm({ setRightButtonText}) {
     const { form, onChange, cleanFields } = useForm({
         email: "",
         password: ""
