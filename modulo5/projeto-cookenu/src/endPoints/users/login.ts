@@ -13,10 +13,15 @@ export default async function login(
     try {
         const {email, password} = req.body
 
+        if ( !email || !password) {
+            res.statusCode = 422
+            throw new Error("Email and password required")
+        }
+
         const [user] = await connection(userTableName)
         .where({email})
 
-        const passwordIdCorrect:boolean = compareHash (password,user.password)
+        const passwordIdCorrect:boolean = compareHash (password,user?.password || "")
 
         if (!passwordIdCorrect){
             res.statusCode = 401
