@@ -48,9 +48,19 @@ const filterCategory = (restaurants)=>{
 
     })
     const takeOutRepeat = [...new Set(arrayAux)]
-    setCategoryRestaurant(takeOutRepeat)
 
+    const changeObjectArray = []
+
+    takeOutRepeat.map((category)=>{
+        const insertObj = {category,select:false}
+        changeObjectArray.push(insertObj)
+   
+    })
+    console.log (changeObjectArray)
+    setCategoryRestaurant(takeOutRepeat)
 }
+
+
 console.log(categoryRestaurant);
 
 useEffect (() => {
@@ -66,8 +76,30 @@ useEffect (() => {
         return <CardRestaurant restaurant={restaurant}/>
     })
 
+    const changeCategory = (category) =>  {
+        setValueCategory(category)
+
+        const result = categoryRestaurant.map((cat) =>{
+            if(cat.category === category) {
+                return {
+                    ...cat,
+                    select:true
+                }
+            } else {
+                return {
+                    ...cat,
+                    select:false
+                }
+            }
+            
+
+        })
+        setCategoryRestaurant(result)
+    }
+
 
 return (
+
         <ContainerFeed>
         <Header title={"Ifuture"}/>
         <BoxInputSearch>
@@ -78,18 +110,20 @@ return (
         </BoxInputSearch>
         <Menu>
         <MenuItem 
-                onClick={()=>setValueCategory('')}
+                onClick={()=>changeCategory('')}
                 >
                 todos
                 </MenuItem>
         {categoryRestaurant.map((category)=>{
+            
             return (
                 <MenuItem 
-                select={false}
-                onClick={()=>setValueCategory(category)}
+                select={category.select}
+                onClick={()=>changeCategory(category.category)}
                 >
-                {category}
-                </MenuItem>)
+                {category.category}
+                </MenuItem>
+                )
         })}
         </Menu>
         <CardsRestaurant>
@@ -97,5 +131,6 @@ return (
         </CardsRestaurant>
         </ContainerFeed>
     )
+
 }
 export default Feed

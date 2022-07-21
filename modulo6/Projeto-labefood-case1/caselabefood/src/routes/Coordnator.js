@@ -5,6 +5,9 @@ export const gotToLogin = (navigate) => {
 export const gotToFeed = (navigate) => {
     navigate('/feed')
 }
+export const gotToRestaurant = (navigate,id) => {
+    navigate(`/feed/${id}`)
+}
 
 export const gotToSingUp = (navigate) => {
     navigate('/signup')
