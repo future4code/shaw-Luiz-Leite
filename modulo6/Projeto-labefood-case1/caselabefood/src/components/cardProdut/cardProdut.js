@@ -1,10 +1,9 @@
-import { BoxInform, BoxNameQuantity, ContainerCardProdut, ImageProduct, InformDescription, NameProduct } from "./Styled"
+import { BoxInform, BoxInformPriceButton, BoxNameQuantity, ContainerCardProdut, ImageProduct, InformButton, InformDescription, InformPrice, NameProduct } from "./Styled"
 
 
 const CardProdut = ({product}) => {
 
-    return 
-    <ContainerCardProdut>
+    return <ContainerCardProdut>
     <ImageProduct src={product.photoUrl}/>
     <BoxInform>
         <BoxNameQuantity>
@@ -13,6 +12,14 @@ const CardProdut = ({product}) => {
         <InformDescription>
             {product.description}
         </InformDescription>
+        <BoxInformPriceButton>
+        <InformPrice>
+        {product.price}
+        </InformPrice>
+        <InformButton>
+        Adicionar
+        </InformButton>
+        </BoxInformPriceButton>
     </BoxInform>
     </ContainerCardProdut>
 }
