@@ -1,7 +1,9 @@
+import ModalSelectQuantity from "../modalSelectQuantity/modalSelectQuantity"
 import { BoxInform, BoxInformPriceButton, BoxNameQuantity, ContainerCardProdut, ImageProduct, InformButton, InformDescription, InformPrice, NameProduct } from "./Styled"
 
 
 const CardProdut = ({product}) => {
+    const [showModal,setShowModal] = useState(false)
 
     return <ContainerCardProdut>
     <ImageProduct src={product.photoUrl}/>
@@ -16,10 +18,11 @@ const CardProdut = ({product}) => {
         <InformPrice>
         {product.price}
         </InformPrice>
-        <InformButton>
+        <InformButton onClick={() => setShowModal (true)}>
         Adicionar
         </InformButton>
         </BoxInformPriceButton>
+        <ModalSelectQuantity open={showModal} setOpen={setShowModal}/>
     </BoxInform>
     </ContainerCardProdut>
 }

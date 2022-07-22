@@ -35,6 +35,7 @@ const Login = () => {
             password
         }
         loginApi(userLogin)
+        console.log(userLogin)
 
     }
     const loginApi = async (body) => {
@@ -64,6 +65,7 @@ const Login = () => {
                 }
                 console.log(err.response.data.message)
             })
+            
     }
 
     return (

@@ -1,70 +1,66 @@
-# Getting Started with Create React App
+iFuture - 4Food
+4Food
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Sobre
+4Food - Restaurantes na porta da sua casa!
+Aplicação de serviço de entregas para restaurantes. Desenvolvida em React.js
 
-## Available Scripts
+Recursos Utilizados
+axios
+react-router-dom
+styled-components
+Material UI
+react-loading-dot
+Design
+https://zpl.io/scene/VDdGEYr
 
-In the project directory, you can run:
+Feito por Camila Mizutani
+Link do Surge
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Login: 
+Senha: 
+O que funciona
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Cadastro
 
-### `npm test`
+Criação de conta, cadastrando dados pessoais e endereço
+Mensagem no caso de informação incorreta
+Após a finalização do cadastro, redirecionamento para página principal
+Busca e Seleção
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Visualização de lista com todos restaurantes
+Filtro de restaurantes por nome na página de buscas
+Filtro de restaurantes por categoria na página principal
+Visualização do cardápio e detalhes de um restaurante ao clique/toque
+Cardápio
 
-### `npm run build`
+Visualização de informações do restaurante: foto, nome, tipo, tempo de entrega, frete, endereço
+Visualização dos pratos de um restaurante divididos por categoria
+Visualização de detalhes do prato
+Capacidade de adicionar os pratos no carrinho e a quantidade de cada um
+Capacidade de remover itens do carrinho
+Carrinho e finalização de compra
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Visualizção da lista de itens adicionados ao carrinho
+Visualização do endereço de entrega no carrinho
+Total da compra de acordo com a quantidade e preço dos itens
+Seleção de forma de pagamento
+Assim que o pedido é feito, é renderizado alguns detalhes do pedido em andamento na página principal
+Perfil
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Visualização de dados pessoais e endereço
+Edição de dados pessoais e endereço
+No caso de informação incorreta na edição, alerta
+Histórico de pedidos concluídos
+Funcionalidades adicionais:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Página restaurante
 
-### `npm run eject`
+Adição (do layout proposto) de um botão para ir diretamente ao carrinho, reduzindo o percurso que o(a) usuário(a) precisa fazer e desistimulando que ele(a) tente adicionar itens de restaurantes diferentes no carrinho (o que não é possível).
+Página carrinho
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Adição (do layout proposto) de um botão para voltar ao restaurante e continuar adicionando.
+Página perfil
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Adição (do layout proposto) de um botão de logout

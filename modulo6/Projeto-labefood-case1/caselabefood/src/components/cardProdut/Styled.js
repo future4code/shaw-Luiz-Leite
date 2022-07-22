@@ -41,7 +41,7 @@ display: flex;
 justify-content: space-between;
 flex-direction: column;
 padding: 1rem 0rem 0 1rem;
-flex-grow:1
+flex-grow:1;
 `
 export const InformDescription = styled.p `
 font-family: Roboto;

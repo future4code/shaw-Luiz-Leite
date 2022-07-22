@@ -1,4 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
+import {useEffect} from "react";
+import {useState} from "react";
 import { BASE_URL } from "../../constants/BASE_URL"
 import axios from "axios";
 import {BoxInputSearch, ContainerFeed, Menu, MenuItem} from "../../pages/feed/Styled"
@@ -46,7 +48,7 @@ const filterCategory = (restaurants)=>{
     restaurants && restaurants.map((res) =>{
         arrayAux.push(res.category)
 
-    })
+   })
     const takeOutRepeat = [...new Set(arrayAux)]
 
     const changeObjectArray = []
