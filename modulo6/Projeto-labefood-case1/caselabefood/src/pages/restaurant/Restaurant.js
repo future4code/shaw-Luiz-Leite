@@ -1,10 +1,13 @@
 import React, { useEffect } from "react";
+import { useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import { BASE_URL } from "../../constants/BASE_URL";
 import { Category, ContainerRestaurant, SelectionProductByCategory } from "../restaurant/Styled"
 import CardRestaurantDetails from "../../components/cardRestaurantDetails/CardRestaurantDetails"
 import CardProdut from "../../components/cardProdut/cardProdut";
+import Header from "../../components/header/Header";
+import CardRestaurant from "../../components/cardRestaurant/CardRestaurant";
 
 const Restaurant = () => {
 
@@ -52,6 +55,7 @@ const Restaurant = () => {
 
     return (
         <ContainerRestaurant>
+        <Header title={"Restaurante"} back/>
             <CardRestaurant>
                 <CardRestaurantDetails restaurant={restaurant} />
                 {

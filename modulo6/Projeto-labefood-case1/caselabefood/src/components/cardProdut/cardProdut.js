@@ -1,4 +1,5 @@
-import ModalSelectQuantity from "../modalSelectQuantity/modalSelectQuantity"
+import ModalSelectQuantity from "../modalSelectQuantity/ModalSelectQuantity"
+import { useState } from "react"
 import { BoxInform, BoxInformPriceButton, BoxNameQuantity, ContainerCardProdut, ImageProduct, InformButton, InformDescription, InformPrice, NameProduct } from "./Styled"
 
 

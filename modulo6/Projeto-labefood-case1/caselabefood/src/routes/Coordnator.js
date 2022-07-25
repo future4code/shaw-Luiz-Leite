@@ -5,6 +5,12 @@ export const gotToLogin = (navigate) => {
 export const gotToFeed = (navigate) => {
     navigate('/feed')
 }
+
+export const gotToBack = (navigate) => {
+    navigate(-1)
+}
+
+
 export const gotToRestaurant = (navigate,id) => {
     navigate(`/feed/${id}`)
 }
