@@ -8,6 +8,7 @@ import axios from 'axios'
 import { BASE_URL } from "../../constants/BASE_URL"
 import { useNavigate } from "react-router-dom"
 import {gotToSingUpAdress} from "../../routes/Coordnator"
+import {Header} from "../../components/header/Header";
 
 
 
@@ -60,6 +61,7 @@ await axios.post(`${BASE_URL}/signup`,form)
 
     return (
         <Main>
+        <Header back/>
             <p>Cadastrar</p>
             <form onSubmit={onSubmitForm}>
                 <InputMaterial

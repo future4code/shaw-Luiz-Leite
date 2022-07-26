@@ -131,6 +131,7 @@ return (
         <CardsRestaurant>
         {filterRestaurant}
         </CardsRestaurant>
+        <Menu/>
         </ContainerFeed>
     )
 

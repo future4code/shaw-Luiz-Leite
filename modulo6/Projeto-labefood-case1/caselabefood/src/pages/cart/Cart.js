@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import {CartConfig, InfoProfile, Main,MainCart } from "../cart/Styled"
+import {CartConfig, CartInfo, EmptyCart, Form, Freight, InfoProfile, InfoRestaurant, Main, Payment, Total } from "../cart/Styled"
 import {useRequestData} from "../../hooks/UseRequestData"
 import {BASE_URL} from "../../constants/BASE_URL"
+import Header from "../../components/header/Header";
 
 const Cart = () =>{
 
@@ -25,45 +26,74 @@ const onChangePayment = (event) => {
         }
     })
     setPayment(result)
-    setPaymentMenthod(newCheck)
+    setPaymenthMethod(newCheck)
 
 
 }
 
-    console.log (profile[0].user)
+    console.log (payment)
 
 
     return (
         <Main>
-        <MainCart>
-        <p>meu carrinho</p>
-        </MainCart>
+        <Header title={"Meu Carrinho"} back/>
         <CartConfig>
             <InfoProfile>
             <p>Endereço de Entrega</p>
             <p>{profile[0].user && profile[0].user.address}</p>
             </InfoProfile>
-            <div>
-            <p>carrinho vazio</p>
+            <InfoRestaurant>
+            <p>nome do restaurante</p>
+            <p>Rua do restaurante</p>
+            <p>30 - 45 min</p>
 
-            </div>
-            <div>
-            <p> Frete R$ 00,00</p>
-            <div>
-                <p>SubTotal</p>
-                <p>R$ 00,00</p>
-            </div>
-            <h1>Forma de pagamento</h1>
-            <form>
-            <label>dinheiro</label>
-            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"/>
-            <label></label>
-            <input type="checkbox" id="vehicle2" name="vehicle2" value="Car"/>
-            <button>Confirmar</button>
-            
-            </form>
-
-            </div>
+            </InfoRestaurant>
+            <CartInfo>
+            {mockData.leght>0?mockData.map((data)=>{
+                return (
+                    <CardCart
+                    name={data.name}
+                    price={data.price}
+                    photoUrl={data.amount}
+                    description={data.description}
+                    />
+                )
+            }) : <EmptyCart>Carrinho vazio</EmptyCart>}
+            </CartInfo>
+            <Payment>
+                <Freight>frete {new Intl.NumberFormat('pt-Br',{
+                    style: 'currency',
+                    currency: 'BRL'
+                }).format(6)}
+                </Freight>
+                <Total>
+                    <p>Subtotal</p>
+                    <p>{new Intl.NumberFormat('pt-Br',{
+                    style: 'currency',
+                    currency: 'BRL'
+                }).format(10)}</p>
+                </Total>
+                <h1>Forma de pagamento</h1>
+                <hr/>
+                <Form>
+                    {Object.keys(paymentMethod).map((key) =>{
+                        const checked = paymentMethod[key]
+                        return (
+                            <div key={key}>
+                            <input
+                                checked={checked}
+                                name={key}
+                                id={key}
+                                type={'checkbox'}
+                                onChange={onChangePayment}
+                            />
+                            <label>{key}</label>
+                            </div>
+                        )
+                    })}
+                    <Button>Confirmar</Button>
+                </Form>
+            </Payment>
         </CartConfig>
         </Main>
     )
