@@ -1,25 +1,27 @@
-export const gotToLogin = (navigate) => {
+export const goToLogin = (navigate) => {
     navigate('/')
 }
 
-export const gotToFeed = (navigate) => {
+export const goToFeed = (navigate) => {
     navigate('/feed')
 }
 
-export const gotToBack = (navigate) => {
+export const goToBack = (navigate) => {
     navigate(-1)
 }
 
-
-export const gotToRestaurant = (navigate,id) => {
+export const goToRestaurant = (navigate,id) => {
     navigate(`/feed/${id}`)
 }
 
-export const gotToSingUp = (navigate) => {
+export const goToSingUp = (navigate) => {
     navigate('/signup')
 }
 
-export const gotToSingUpAdress = (navigate) => {
+export const goToSingUpAdress = (navigate) => {
     navigate('/signup/adress')
 }
 
+export const goToProfileEdit = (navigate,id)=> {
+    navigate(`/profile/${id}`)
+}

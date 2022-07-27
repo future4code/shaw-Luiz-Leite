@@ -6,6 +6,7 @@ import Feed from "../pages/feed/Feed";
 import Restaurant from "../pages/restaurant/Restaurant";
 import Profile from "../pages/profile/Profile";
 import Cart from "../pages/cart/Cart"
+import ProfileEdit from "../pages/profileEdit/ProfileEdit"
 
 
 
@@ -21,6 +22,7 @@ const Router = () =>{
             <Route path="/feed" element={<Feed/>}/>
             <Route path="/feed/:restaurantId" element={<Restaurant/>}/>
             <Route path="/profile" element={<Profile/>}/>
+            <Route path="/profile/:id" element={<ProfileEdit/>}/>
             <Route path="/cart" element={<Cart/>}/>
             </Routes>
         </BrowserRouter>
