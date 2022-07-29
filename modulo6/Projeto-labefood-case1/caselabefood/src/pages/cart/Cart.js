@@ -3,8 +3,11 @@ import {CartConfig, CartInfo, EmptyCart, Form, Freight, InfoProfile, InfoRestaur
 import {useRequestData} from "../../hooks/UseRequestData"
 import {BASE_URL} from "../../constants/BASE_URL"
 import Header from "../../components/header/Header";
+import useProtectedPage from "../../hooks/UseProctedPage"
 
 const Cart = () =>{
+
+    useProtectedPage()
 
     const profile = useRequestData ({}, `${BASE_URL}/profile`)
     const [payment,setPayment] = useState ([])

@@ -8,8 +8,12 @@ import CardRestaurantDetails from "../../components/cardRestaurantDetails/CardRe
 import CardProdut from "../../components/cardProdut/cardProdut";
 import Header from "../../components/header/Header";
 import CardRestaurant from "../../components/cardRestaurant/CardRestaurant";
+import useProtectedPage from "../../hooks/UseProctedPage"
+
 
 const Restaurant = () => {
+
+    useProtectedPage()
 
     const { restaurantId } = useParams()
     const [restaurant, setRestaurant] = useState({})

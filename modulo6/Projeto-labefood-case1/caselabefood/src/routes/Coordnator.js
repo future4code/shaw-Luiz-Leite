@@ -25,3 +25,11 @@ export const goToSingUpAdress = (navigate) => {
 export const goToProfileEdit = (navigate,id)=> {
     navigate(`/profile/${id}`)
 }
+
+export const goToProfile = (navigate)=> {
+    navigate(`/profile`)
+}
+
+export const goToAdressEdit = (navigate,id) => {
+    navigate(`/adressEdit/${id}`)
+}

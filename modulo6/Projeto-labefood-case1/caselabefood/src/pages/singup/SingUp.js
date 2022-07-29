@@ -14,7 +14,11 @@ import {Header} from "../../components/header/Header";
 
 
 
+
 const SignUp = () => {
+
+
+
     const { form, onChange, clean } = useForm({
 
         "name": "",

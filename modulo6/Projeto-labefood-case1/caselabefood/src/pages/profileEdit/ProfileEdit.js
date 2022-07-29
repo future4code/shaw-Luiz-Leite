@@ -3,15 +3,22 @@ import { useRequestData } from "../../hooks/UseRequestData"
 import { Main, InputMaterial, ButtonStyled } from "../singup/Styled"
 import {BASE_URL} from "../../constants/BASE_URL"
 import axios from "axios"
+import { goToProfile } from "../../routes/Coordnator"
+import useProtectedPage from "../../hooks/UseProctedPage"
 
 
 const ProfileEdit = () =>{
+
+    useProtectedPage()
 
     const person = useRequestData({},`${BASE_URL}/profile`)
 
     const [name,setName] = useState('')
     const [email,setEmail] = useState('')
     const [cpf,setCpf] = useState('')
+
+    const navigate = useNavigate()
+
 
     const getPerson = async() =>{
         await axios.get(`${BASE_URL}/profile`,{
@@ -42,6 +49,7 @@ const ProfileEdit = () =>{
         })
         .then((res)=>{
             console.log(res.data)
+            goToProfile(navigate)
         })
         .catch((err)=>{
             console.log(err.response)

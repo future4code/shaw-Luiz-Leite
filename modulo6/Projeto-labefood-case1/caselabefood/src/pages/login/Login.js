@@ -7,6 +7,7 @@ import axios from 'axios'
 import { useNavigate } from "react-router-dom";
 import {BASE_URL} from "../../constants/BASE_URL"
 import { gotToFeed } from "../../routes/Coordnator";
+import { Button } from "@mui/material";
 
 
 
@@ -110,6 +111,7 @@ const Login = () => {
                 </DivPassword>
                 <ButtonStyled type="submit">Entrar</ButtonStyled>
             </Form>
+            <Button onClick={()=>goToSingUp(navigate)}>Não possui cadastro clik aqui</Button>
         </Main>
     )
 }

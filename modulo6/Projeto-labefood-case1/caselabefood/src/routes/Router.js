@@ -7,6 +7,7 @@ import Restaurant from "../pages/restaurant/Restaurant";
 import Profile from "../pages/profile/Profile";
 import Cart from "../pages/cart/Cart"
 import ProfileEdit from "../pages/profileEdit/ProfileEdit"
+import AdressEdit from "../pages/adressEdit/adressEdit";
 
 
 
@@ -19,6 +20,7 @@ const Router = () =>{
             <Route index element={<Login/>}/> 
             <Route path="/signup" element={<Signup/>}/>
             <Route path="/signup/adress" element={<SignupAdress/>}/>
+            <Route path="/adressEdit/:id" element={<AdressEdit/>}/>
             <Route path="/feed" element={<Feed/>}/>
             <Route path="/feed/:restaurantId" element={<Restaurant/>}/>
             <Route path="/profile" element={<Profile/>}/>
