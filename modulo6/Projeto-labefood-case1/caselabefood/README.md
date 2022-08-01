@@ -14,12 +14,13 @@ react-loading-dot
 Design
 https://zpl.io/scene/VDdGEYr
 
-Feito por Camila Mizutani
+
 Link do Surge
 
 
-Login: 
-Senha: 
+Nome: Luiz Marcelo de Figueiredo leite
+
+
 O que funciona
 
 Cadastro
