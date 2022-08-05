@@ -1,7 +1,6 @@
 import { Request, Response } from "express"
 import connection from "../src/connection"
 import { generateToken } from "../src/services/authenticator"
-import { generateHash } from "../src/services/hashmanager"
 import generateId from "../src/services/idGeneration"
 import { userTableName } from "../src/types/types"
 

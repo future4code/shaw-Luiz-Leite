@@ -1,16 +1,13 @@
 import app from "./app"
-import createRecipe from "./endPoints/recipes/createRecipe"
-import createRecipeId from "./endPoints/recipes/createRecipeById"
-import getProfile from "./endPoints/users/getProfile"
-import getUserById from "./endPoints/users/getUserById"
-import login from "./endPoints/users/login"
-import signup from "./endPoints/users/signup"
+import createCompetition from "../src/createcompetition"
+import signup from "../src/singupresults"
+import createId from "../src/createcompetittionById"
 
-//Criação de cadastro (singupresults)
+//Cadastrar resultados(singupresults)
 app.post("/signup", signup)
 
-//Criar uma receita
-app.post("/recipe", createRecipe)
+//Criar uma competição
+app.post("/create", createCompetition)
 
-
+app.get ("/recipe/:id", createId)
 

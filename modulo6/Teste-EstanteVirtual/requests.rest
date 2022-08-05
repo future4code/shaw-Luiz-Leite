@@ -2,42 +2,20 @@ POST http://localhost:3003/users/signup
 Content-Type: application/json
 
 {
-    "name":"Alice",
-    "email":"alice@gmail.com",
-    "password":"123"
-}
-### 
-# @name login
-POST http://localhost:3003/users/login
-Content-Type: application/json
-
-{
-
-    "email":"alice@gmail.com",
-    "password":"123"
+  "competicao": "100m classificatoria 1", 
+  "atleta": "Joao das Neves", 
+  "value": "10.234", 
+  "unidade": "s"
 }
 
 ###
-# @name getProfile
-http://localhost:3003/users/profile
-Authorization: : {{login.response.body.token}}
-
-###
-http://localhost:3003/users/{{getProfile.response.body.id}}/profile
-Authorization: {{login.response.body.token}}
-
-###
-POST http://localhost:3003/recipe
+POST http://localhost:3003/createCompetition
 Content-Type: application/json
-Authorization: {{login.response.body.token}}
 
 
 {
-    "title":"Big Mac",
-    "description":"doi hamburguers, alface, queijo, molho especial, cebola, pikles e pão com gergilin"
-
+    "typecompeticao":"100m rasos",
+    "description":"Menor tempo vence"
 }
 
-###
-GET http://localhost:3003/recipe/
-Authorization: {{login.response.body.token}}
+

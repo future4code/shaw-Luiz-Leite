@@ -4,7 +4,7 @@ import { getTokenData } from "../src/services/authenticator"
 import generateId from "../src/services/idGeneration";
 import { recepiTableName } from "../src/types/types";
 
-export default async function createRecipe(
+export default async function createCompetition(
     req: Request,
     res: Response
 ): Promise<void> {
